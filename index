@@ -1,1 +1,14 @@
-<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,6636,1765,52,1975,1839" currency="USD" theme="dark" transparent="false" show-symbol-logo="true"></div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DAO Z 2.1</title>
+</head>
+<body>
+    <h1>DAO Z 2.1</h1>
+
+    <!-- CoinMarketCap Widget -->
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+    <div id="coinmarketcap-widget-marquee" coins="1,1027,825,6636,1765,52,1975,1839" currency="USD" theme="dark" transparent="false" show-symbol-logo="true"></div>
+
+</body>
+</html>
