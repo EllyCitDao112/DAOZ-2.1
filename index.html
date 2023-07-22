@@ -49,18 +49,70 @@
   <img src="https://firebasestorage.googleapis.com/v0/b/deweb-519a7.appspot.com/o/posts%2FBBSDAOZ%2Fcontent-images%2F6cede5a7-5588-4cc7-b776-43bd86c1c76d.png?alt=media" alt="Image">
 </a>
 
+<p>Welcome to our DAOZ EM⛰️⛏️💎Employment.</p>
+
+<!-- Form to collect day laborer data -->
+<form id="laborerForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Placeholder for displaying contract response -->
+<div id="contractResponse"></div>
+
 <script>
     // Embedded JavaScript code starts here
-    function greetUser() {
-        let name = prompt("Please enter your name:");
-        if (name) {
-            alert("Hello, " + name + "! Welcome to our website!");
-        }
-    }
+    const contractAddress = "0x1234567890abcdef"; // Replace with the actual contract address
+    const contractABI = [ /* Replace with the actual contract ABI */ ];
 
-    // Call the function when the page loads
-    greetUser();
+    // Function to handle form submission
+    document.getElementById("laborerForm").onsubmit = async function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const age = document.getElementById("age").value;
+
+        // Basic validation
+        if (!name || !email || !age) {
+            alert("Please fill in all the required fields.");
+            return;
+        }
+
+        // More advanced validation could be done here (e.g., email format validation)
+
+        // In a real-world scenario, you would use web3.js or other blockchain libraries
+        // to interact with the smart contract. This is a simplified example.
+
+        // Assume the smart contract has a function called "registerLaborer" that we want to call.
+        // You would need to set up web3 and use the contract ABI to interact with the contract.
+        // Below is a placeholder for illustration purposes.
+
+        try {
+            const contractResponse = await registerLaborer(name, email, age);
+            document.getElementById("contractResponse").textContent = contractResponse;
+        } catch (error) {
+            document.getElementById("contractResponse").textContent = "Error: " + error.message;
+        }
+    };
+
+    // Placeholder function to simulate interaction with the smart contract
+    async function registerLaborer(name, email, age) {
+        // Simulate interaction with the smart contract (replace this with actual contract interaction)
+        // For demonstration purposes, just return a success message.
+        return "Successfully registered as a day laborer: " + name;
+    }
 </script>
+
+
 
 
 </body>
